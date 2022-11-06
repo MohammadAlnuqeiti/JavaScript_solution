@@ -9,7 +9,7 @@ if (valuex>valuey) {
    alert ("Hello World");
 }
 if (valuex<valuey) {
-   console.log ("Goodbye ");
-   document.write ("Goodbye ");
-   alert ("Goodbye ");
+   console.log ("Goodbye");
+   document.write ("Goodbye");
+   alert ("Goodbye");
 }
