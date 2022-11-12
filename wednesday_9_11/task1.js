@@ -25,10 +25,23 @@ head.addEventListener('mouseout', function(){
 //            });
 
 
- function changecolor() {
-     document.querySelector(`#head2`).style.backgroundColor = 'red';}
+//  function changecolor() {
+//      document.querySelector(`#head2`).style.backgroundColor = 'red';}
+ function changecolor1() {
+     let x =[`red`,`green`,`blue`,`lightgreen`]
+     for (i=0;i<x.length;i++){
 
-setInterval(changecolor, 900); 
+      i = Math.floor((Math.random() * 4))
+      return  x[i]
+
+     }
+     }
+
+function changecolor() {
+     document.querySelector(`#head2`).style.backgroundColor = changecolor1();
+}
+
+setInterval(changecolor, 500); 
      // program to display a text using setInterval method
 
 // function color(){
