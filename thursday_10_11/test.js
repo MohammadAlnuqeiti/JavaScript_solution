@@ -4,7 +4,7 @@ function setData(data, userData) {
     if (userData == "userName") {
         userArray["userName"] = data;
         return (
-            document.getElementById("userName").innerHTML = data,
+            document.getElementById("userName") = data,
             document.getElementById("userName").style.backgroundColor = "Green",
             setUserData(userArray)
         );
@@ -12,7 +12,7 @@ function setData(data, userData) {
         userArray["userEmail"] = data;
 
         return (
-            document.getElementById("userEmail").innerHTML = data,
+            document.getElementById("userEmail") = data,
             document.getElementById("userEmail").style.backgroundColor = "Red",
             setUserData(userArray)
         );
@@ -20,7 +20,7 @@ function setData(data, userData) {
         userArray["userNumber"] = data;
 
         return (
-            document.getElementById("userNumber").innerHTML = data,
+            document.getElementById("userNumber") = data,
             document.getElementById("userNumber").style.backgroundColor = "Yellow",
             setUserData(userArray)
         );
@@ -53,15 +53,17 @@ function setUserData(userData) {
 return html
     }
     html += "</table>";
-    document.getElementById("tableContainer").innerHTML = html;
+    document.getElementById("tableContainer")= html;
 
 }
 let btn=document.getElementById("btn")
 console.log(btn)
 btn.addEventListener("click", function(){
+    document.getElementById("userName").innerHTML
+    document.getElementById("userEmail").innerHTML
+    document.getElementById("userNumber").innerHTML
 
-
-    document.getElementById("tableContainer").innerHTML = html;
+    document.getElementById("tableContainer").innerHTML ;
 
 }
 )
