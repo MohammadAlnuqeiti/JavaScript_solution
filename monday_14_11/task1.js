@@ -1,4 +1,5 @@
 
+let input = document.querySelectorAll(`input`).value
 
 let form2 = document.getElementById(`form`)
 let name1 = document.getElementById(`firstName`).value
@@ -7,6 +8,8 @@ console.log(form)
 let users = JSON.parse(localStorage.getItem('userData')) || []
 var data = users
 console.log(data)
+
+
 form.addEventListener('submit', getData)
 function getData (e){
 
@@ -26,17 +29,18 @@ var onlyUser = {
     phoneNumber:phone_Number
 }
 users.push(onlyUser)
-console.log(fName,lName,mail,pass_word,phone_Number)
-console.log(onlyUser)
+// console.log(fName,lName,mail,pass_word,phone_Number)
+// console.log(onlyUser)
 localStorage.setItem(`userData`,JSON.stringify(users))
 
+
 let userValid=false
-
-let input = document.querySelectorAll(`input`).value
-
+// localStorage.clear()
 
 if (fName !== "" && lName !== "" && mail !== "" && pass_word !== "" && phone_Number !== "" ){
-    userValid=true,
+console.log("input");
+    
+//     userValid=true;
 //     form2.style.cssText=`
 // display:flex ;
 
@@ -46,12 +50,17 @@ if (fName !== "" && lName !== "" && mail !== "" && pass_word !== "" && phone_Num
 // display:none ;
 
 // `
-console.log(input)
+window.location = "./login.html"  
+}
+else{
+    console.log("error input");
+
   }
   
-  if (userValid === false ){
-      e.preventDefault();
-  }
+//   if (userValid === false ){
+//     console.log(`input`) 
+//       e.preventDefault();
+//   }
 
 
 
@@ -79,41 +88,42 @@ console.log(users)
 // localStorage.clear()
 
 
-console.log(form2)
+// console.log(form2)
 
-form2.addEventListener('submit', login)
-function login(e){
-    e.preventDefault()
+// form2.addEventListener('submit', login)
+// function login(e){
+//     e.preventDefault()
 
-// let q =alert(`hi user`)
-// let z = alert(`please insert true information`)
+// // let q =alert(`hi user`)
+// // let z = alert(`please insert true information`)
 
-let aar =data.map (function(ele){
-var mail1 = document.getElementById(`Email1`).value
-var pass_word1 = document.getElementById(`password1`).value
+// let aar =data.map (function(ele){
+// var mail1 = document.getElementById(`Email1`).value
+// var pass_word1 = document.getElementById(`password1`).value
 
-if (mail1 === data[data.length-1].Email && pass_word1 === data[data.length-1].password){
-// if (mail1 === ele[ele.length-1].Email && pass_word1 === ele[ele.length-1].password){
-// if (mail1 === ele.Email && pass_word1 === ele.password){
-console.log(`yes`)
-form2.style.display=`none`
-form.style.display=`none`
+// if (mail1 === data[data.length-1].Email && pass_word1 === data[data.length-1].password){
+// // if (mail1 === ele[ele.length-1].Email && pass_word1 === ele[ele.length-1].password){
+// // if (mail1 === ele.Email && pass_word1 === ele.password){
+// console.log(`yes`)
+// form2.style.display=`none`
+// form.style.display=`none`
 
-document.getElementById(`finishMessage`).style.display=`block`
-// let myElement=document.createElement("div")
+// document.getElementById(`finishMessage`).style.display=`block`
+// let myElement=document.createElement("span")
 // let myText =document.createTextNode(`Hi ${name1}`)
 // myElement.appendChild(myText);
 // document.body.appendChild(myElement);
 // console.log(myElement)
+// console.log(data[data.length-1].firstName)
 
-}else{
-     document.getElementById(`passMessage`).style.display=`flex`
-    document.getElementById(`emailMessage`).style.display=`flex`
-//  window.location = "./login.html";
-}
-})
+// }else{
+//      document.getElementById(`passMessage`).style.display=`flex`
+//     document.getElementById(`emailMessage`).style.display=`flex`
+// //  window.location = "./login.html";
+// }
+// })
 
-}
+// }
 
 
 
